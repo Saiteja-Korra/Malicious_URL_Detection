@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html style="font-size: 30px;">
+<head>
+    <title>Phishing Page Detector</title>
+</head>
+<body style="background-color: gray;
+color: white;
+font-size: 50px;
+font-weight: 900;
+text-align: center;
+background-image: url(https://e0.pxfuel.com/wallpapers/990/257/desktop-wallpaper-security-background-security-cybersecurity-and-it-security.jpg);
+padding: 20px;">
+    <h1 style="font-family: 'Caveat', cursive;">Malicious URL Detector</h1>
+    <form action="/predict" method="POST" style="font-size: 15; vertical-align: middle;">
+        <label for="url" style="font-size: 40px;">Enter url</label>
+        <input type="text" id="url" name="url" style="width: 400px; height: 40px; vertical-align: middle;" required>
+        <input type="submit" value="Detect">
+    </form>
+    {% if prediction_text %}
+        <p style="font-size: 30px; background-color: rgb(255, 240, 241); color: brown; padding: 5px;">{{ prediction_text }}</p>
+    {% endif %}
+    <style>input[type="submit"] {
+        width: 100px; 
+        height: 40px; 
+        font-size: 18px;
+        vertical-align: middle;
+        border: 2px solid #007BFF;
+        border-radius: 8px; 
+    }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">    
+</body>
+</html>
